@@ -44,33 +44,32 @@ MENU
 <div className="places">
 
 <div>
-Paraná
-<strong>BRASIL</strong>
-</div>
-
-
-<div>
-São Paulo
+Induslab - Paraná
 <strong>BRASIL</strong>
 </div>
 
 <div>
-Bahia
+Induslab - Bahia
 <strong>BRASIL</strong>
 </div>
 
 <div>
-Pernambuco
+Induslab - São Paulo
 <strong>BRASIL</strong>
 </div>
 
 <div>
-Recife
+Induslab - Pernambuco
 <strong>BRASIL</strong>
 </div>
 
 <div>
-Flórida
+Induslab - Ceará
+<strong>BRASIL</strong>
+</div>
+
+<div>
+Induslab - Flórida
 <strong>ESTADOS UNIDOS</strong>
 </div>
 

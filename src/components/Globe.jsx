@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Line } from "@react-three/drei";
 import * as THREE from "three";
+import Markers from "./Markers";
 
 
 function CountryBorders() {
@@ -173,10 +174,9 @@ export default function Globe(){
 
       />
 
-
-
       <Sphere/>
 
+      <Markers />
 
       <CountryBorders/>
 
