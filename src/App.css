@@ -1,165 +1,304 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-body{
-background:#06111d;
-font-family:Arial, Helvetica, sans-serif;
-color:white;
+body {
+    background: #06111d;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 
-.page{
-height:100vh;
-overflow:hidden;
-background:
-linear-gradient(
-120deg,
-#07518b,
-#02070d
-);
-}
-
-
-
-header{
-
-height:90px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 55px;
-
-}
-
-
-header h1{
-
-font-size:28px;
-
+.page {
+    height: 100vh;
+    overflow: hidden;
+    background:
+        linear-gradient(120deg,
+            #07518b,
+            #02070d);
 }
 
 
 
-nav{
+header {
 
-display:flex;
-gap:50px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
 
 }
 
 
-nav span{
+header h1 {
 
-letter-spacing:5px;
-font-size:12px;
+    font-size: 28px;
 
 }
 
 
 
-button{
+nav {
 
-background:none;
-border:1px solid #00cfff;
-color:white;
-border-radius:30px;
-padding:15px 35px;
+    display: flex;
+    gap: 50px;
+
+}
+
+
+nav span {
+
+    letter-spacing: 5px;
+    font-size: 12px;
 
 }
 
 
 
-.hero{
+button {
 
-display:flex;
-height:calc(100vh - 90px);
-
-}
-
-
-
-.card{
-
-margin-left:45px;
-margin-top:0;
-
-width:450px;
-height:550px;
-
-background:rgba(255,255,255,.1);
-backdrop-filter:blur(20px);
-
-border-radius:30px;
-
-padding:50px;
+    background: none;
+    border: 1px solid #00cfff;
+    color: white;
+    border-radius: 30px;
+    padding: 15px 35px;
 
 }
 
 
 
-.card p{
+.hero {
 
-color:#00d9ff;
-letter-spacing:4px;
-
-}
-
-
-
-.card h2{
-
-font-size:30px;
-margin-top:20px;
+    display: flex;
+    height: calc(100vh - 90px);
 
 }
 
 
 
-.places{
+.card {
 
-margin-top:30px;
+    margin-left: 45px;
+    margin-top: 0;
 
-}
+    width: 450px;
+    height: 550px;
 
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
 
-.places div{
+    border-radius: 30px;
 
-border-bottom:1px solid rgba(255,255,255,.15);
-padding:15px 0;
-
-display:flex;
-justify-content:space-between;
-
-}
-
-
-
-.places strong{
-
-color:#00d9ff;
-font-size:12px;
-letter-spacing:3px;
+    padding: 50px;
 
 }
 
 
 
-.globe-area{
+.card p {
 
-flex:1;
-margin-top:-80px;
+    color: #00d9ff;
+    letter-spacing: 4px;
+
+}
+
+
+
+.card h2 {
+
+    font-size: 30px;
+    margin-top: 20px;
 
 }
 
 
-.globe-container{
 
-width:100%;
-height:100%;
+.places {
+
+    margin-top: 30px;
 
 }
 
+
+.places div {
+
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    padding: 15px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+.places strong {
+
+    color: #00d9ff;
+    font-size: 12px;
+    letter-spacing: 3px;
+
+}
+
+
+
+.globe-area {
+
+    flex: 1;
+    margin-top: -80px;
+
+}
+
+
+.globe-container {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (max-width: 1000px) {
+
+
+    header {
+        padding: 0 30px;
+    }
+
+
+    nav {
+        gap: 25px;
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    .card {
+
+        margin: 20px 0 0 0;
+
+        width: 350px;
+        height: auto;
+
+    }
+
+
+    .globe-area {
+
+        width: 100%;
+        height: 500px;
+
+        margin-top: -80px;
+
+    }
+
+
+}
+
+
+@media (max-width:600px) {
+
+
+    .page {
+
+        overflow: hidden;
+
+    }
+
+    header {
+
+        height: 80px;
+        padding: 0 20px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    button {
+
+        padding: 10px 22px;
+
+    }
+
+    .hero {
+
+        height: calc(100vh - 80px);
+
+        flex-direction: column;
+
+    }
+
+    .card {
+
+        width: 90%;
+
+        height: auto;
+
+        margin: 20px auto 0;
+
+        padding: 35px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .places {
+
+        margin-top: 30px;
+
+    }
+
+
+
+    .places div {
+
+        padding: 15px 0;
+
+    }
+
+
+
+
+    .globe-area {
+
+        width: 100%;
+
+        height: 420px;
+
+        margin-top: -50px;
+
+    }
+
+
+
+}
