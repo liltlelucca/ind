@@ -181,8 +181,14 @@ export default function Globe(){
       <CountryBorders/>
 
 
-      <OrbitControls/>
-
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        enableDamping
+        dampingFactor={0.08}
+        minPolarAngle={Math.PI / 2}
+        maxPolarAngle={Math.PI / 2}
+      />
     </Canvas>
 
   );
