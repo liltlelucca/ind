@@ -149,14 +149,17 @@ export default function Globe(){
 
   return (
 
-    <Canvas
-
-      camera={{
+  <Canvas
+    style={{
+        width: "100%",
+        height: "100%"
+    }}
+    dpr={[1,2]}
+    camera={{
         position:[0,0,6],
-        fov:45
-      }}
-
-    >
+        fov:50
+    }}
+>
 
 
       <ambientLight intensity={2}/>

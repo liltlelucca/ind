@@ -1,304 +1,289 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
-body {
-    background: #06111d;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+html,
+body,
+#root{
+    width:100%;
+    min-height:100%;
 }
 
-
-.page {
-    height: 100vh;
-    overflow: hidden;
-    background:
-        linear-gradient(120deg,
-            #07518b,
-            #02070d);
+body{
+    background:#06111d;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-
-
-header {
-
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 55px;
-
+.page{
+    min-height:100vh;
+    background:linear-gradient(120deg,#07518b,#02070d);
 }
 
+header{
+    width:100%;
+    height:90px;
 
-header h1 {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    font-size: 28px;
-
+    padding:0 clamp(20px,5vw,60px);
 }
 
-
-
-nav {
-
-    display: flex;
-    gap: 50px;
-
+header h1{
+    font-size:clamp(22px,2vw,30px);
 }
 
-
-nav span {
-
-    letter-spacing: 5px;
-    font-size: 12px;
-
+nav{
+    display:flex;
+    gap:clamp(20px,3vw,50px);
 }
 
-
-
-button {
-
-    background: none;
-    border: 1px solid #00cfff;
-    color: white;
-    border-radius: 30px;
-    padding: 15px 35px;
-
+nav span{
+    font-size:12px;
+    letter-spacing:4px;
+    cursor:pointer;
 }
 
+button{
+    background:none;
+    color:white;
+    border:1px solid #00cfff;
+    border-radius:30px;
+    padding:14px 32px;
+    cursor:pointer;
+}
 
+.hero{
 
-.hero {
+    width:100%;
 
-    display: flex;
-    height: calc(100vh - 90px);
+    min-height:calc(100vh - 90px);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:40px;
+
+    padding:30px clamp(20px,5vw,60px);
 
 }
 
+.card{
 
+    width:min(450px,100%);
+    flex-shrink:0;
 
-.card {
+    background:rgba(255,255,255,.08);
 
-    margin-left: 45px;
-    margin-top: 0;
+    backdrop-filter:blur(18px);
 
-    width: 450px;
-    height: 550px;
+    border-radius:30px;
 
-    background: rgba(255, 255, 255, .1);
-    backdrop-filter: blur(20px);
-
-    border-radius: 30px;
-
-    padding: 50px;
+    padding:40px;
 
 }
 
+.card p{
 
+    color:#00d9ff;
 
-.card p {
+    letter-spacing:4px;
 
-    color: #00d9ff;
-    letter-spacing: 4px;
-
-}
-
-
-
-.card h2 {
-
-    font-size: 30px;
-    margin-top: 20px;
+    font-size:14px;
 
 }
 
+.card h2{
 
+    margin-top:20px;
 
-.places {
+    font-size:clamp(28px,2.2vw,38px);
 
-    margin-top: 30px;
+    line-height:1.25;
 
-}
-
-
-.places div {
-
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
-    padding: 15px 0;
-
-    display: flex;
-    justify-content: space-between;
+    font-weight:700;
 
 }
 
+.places{
 
-
-.places strong {
-
-    color: #00d9ff;
-    font-size: 12px;
-    letter-spacing: 3px;
+    margin-top:35px;
 
 }
 
+.places div{
 
+    display:flex;
 
-.globe-area {
+    justify-content:space-between;
 
-    flex: 1;
-    margin-top: -80px;
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
 
 }
 
+.places strong{
 
-.globe-container {
+    color:#00d9ff;
 
-    width: 100%;
-    height: 100%;
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    text-align:right;
 
 }
 
-@media (max-width: 1000px) {
+.globe-area{
 
+    flex:1;
 
-    header {
-        padding: 0 30px;
+    min-width:300px;
+
+    height:700px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.globe-area canvas{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media(max-width:1000px){
+
+    nav{
+        display:none;
     }
 
-
-    nav {
-        gap: 25px;
+    header{
+        padding:0 25px;
     }
 
+    .hero{
 
-    .hero {
+        flex-direction:column;
 
-        flex-direction: column;
-        align-items: center;
+        justify-content:flex-start;
 
-    }
+        text-align:center;
 
-
-    .card {
-
-        margin: 20px 0 0 0;
-
-        width: 350px;
-        height: auto;
-
-    }
-
-
-    .globe-area {
-
-        width: 100%;
-        height: 500px;
-
-        margin-top: -80px;
+        padding:30px 20px;
 
     }
 
+    .card{
+
+        max-width:650px;
+
+    }
+
+    .places div{
+
+        text-align:left;
+
+    }
+
+    .globe-area{
+
+        width:100%;
+
+        height:520px;
+
+    }
 
 }
 
+/* ---------- Celular ---------- */
 
-@media (max-width:600px) {
+@media(max-width:600px){
 
+    header{
 
-    .page {
-
-        overflow: hidden;
-
-    }
-
-    header {
-
-        height: 80px;
-        padding: 0 20px;
+        height:75px;
 
     }
 
+    header h1{
 
-    header h1 {
-
-        font-size: 22px;
-
-    }
-
-
-    nav {
-
-        display: none;
+        font-size:22px;
 
     }
 
+    button{
 
-    button {
+        padding:10px 20px;
 
-        padding: 10px 22px;
-
-    }
-
-    .hero {
-
-        height: calc(100vh - 80px);
-
-        flex-direction: column;
+        font-size:12px;
 
     }
 
-    .card {
+    .hero{
 
-        width: 90%;
+        min-height:auto;
 
-        height: auto;
+        padding:20px 15px 40px;
 
-        margin: 20px auto 0;
-
-        padding: 35px;
-
-        border-radius: 25px;
+        gap:30px;
 
     }
 
+    .card{
 
-    .card h2 {
+        padding:28px 24px;
 
-        font-size: 36px;
-
-    }
-
-
-    .places {
-
-        margin-top: 30px;
+        border-radius:22px;
 
     }
 
+    .card h2{
 
-
-    .places div {
-
-        padding: 15px 0;
+        font-size:28px;
 
     }
 
+    .places div{
 
+        flex-direction:column;
 
+        align-items:flex-start;
 
-    .globe-area {
-
-        width: 100%;
-
-        height: 420px;
-
-        margin-top: -50px;
+        gap:6px;
 
     }
 
+    .places strong{
 
+        text-align:left;
+
+    }
+
+    .globe-area{
+
+        width:100%;
+
+        height:340px;
+
+    }
 
 }
